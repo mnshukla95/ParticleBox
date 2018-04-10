@@ -31,7 +31,33 @@ class BoxDocumentTests: QuickSpec {
             }
             
             it("should show boxDoc is not nil") {
-                
+                expect(boxDoc!).notTo(beNil())
+            }
+            
+            it("should show boxDoc can be assigned key and value")
+            {
+                expect(boxDoc!.key).to(equal("temperature"))
+                expect(boxDoc!.value).to(equal("25"))
+            }
+            
+            it("should show boxDoc can be assigned scope")
+            {
+                expect(boxDoc!.scope).to(equal("product"))
+            }
+            
+            it("should show boxDoc can be assigned device_id")
+            {
+                expect(boxDoc!.device_id).to(equal("250000000001"))
+            }
+            
+            it("should show boxDoc can be assigned product_id")
+            {
+                expect(boxDoc!.product_id).to(equal(1234))
+            }
+            
+            it("should show boxDoc can be assigned updated_at")
+            {
+                expect(boxDoc!.updated_at).to(equal("2016-08-29T09:12:33.001Z"))
             }
             
         }
