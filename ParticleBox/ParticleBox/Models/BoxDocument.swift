@@ -8,9 +8,7 @@
 
 import UIKit
 
-import UIKit
-
-class BoxDocument: NSObject {
+struct BoxDocument {
     //
     let key: String
     let value: String

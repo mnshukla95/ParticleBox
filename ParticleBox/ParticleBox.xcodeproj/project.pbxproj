@@ -16,6 +16,8 @@
 		13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B54D207C6FF40010C93E /* BoxDocument.swift */; };
 		13A4B552207C70200010C93E /* BoxDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B551207C70200010C93E /* BoxDocumentTests.swift */; };
 		13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B54D207C6FF40010C93E /* BoxDocument.swift */; };
+		13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95D207C76BD00C78648 /* ApiRequest.swift */; };
+		13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95F207D313E00C78648 /* ApiRequestTests.swift */; };
 		37FBF51DCB02746D06521693 /* Pods_ParticleBox_ParticleBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C888C0D4FEA69DE9C5FC2843 /* Pods_ParticleBox_ParticleBoxTests.framework */; };
 		52C5ACDD325A4A7CC8F7B2B1 /* Pods_ParticleBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB9C4B17CDECBCC5BEB2BD /* Pods_ParticleBox.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,8 @@
 		13A4B54D207C6FF40010C93E /* BoxDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocument.swift; sourceTree = "<group>"; };
 		13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParticleBoxTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		13A4B551207C70200010C93E /* BoxDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocumentTests.swift; sourceTree = "<group>"; };
+		13DFB95D207C76BD00C78648 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		13DFB95F207D313E00C78648 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
 		42CB9C4B17CDECBCC5BEB2BD /* Pods_ParticleBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParticleBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7450807A5102B72000660865 /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		786ADD96C175CF06AE96D099 /* Pods-ParticleBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			children = (
 				13A4B51F207C6FB30010C93E /* AppDelegate.swift */,
 				13A4B521207C6FB30010C93E /* ViewController.swift */,
+				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
 				13A4B54F207C6FF90010C93E /* Models */,
 				13A4B523207C6FB30010C93E /* Main.storyboard */,
 				13A4B526207C6FB30010C93E /* Assets.xcassets */,
@@ -138,6 +143,7 @@
 			children = (
 				13A4B536207C6FB30010C93E /* Info.plist */,
 				13A4B551207C70200010C93E /* BoxDocumentTests.swift */,
+				13DFB95F207D313E00C78648 /* ApiRequestTests.swift */,
 				13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */,
 			);
 			path = ParticleBoxTests;
@@ -392,6 +398,7 @@
 			files = (
 				13A4B522207C6FB30010C93E /* ViewController.swift in Sources */,
 				13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */,
+				13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */,
 				13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */,
 				13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */,
 				13A4B552207C70200010C93E /* BoxDocumentTests.swift in Sources */,
 			);

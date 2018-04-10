@@ -59,7 +59,6 @@ class BoxDocumentTests: QuickSpec {
             {
                 expect(boxDoc!.updated_at).to(equal("2016-08-29T09:12:33.001Z"))
             }
-            
         }
         
     }
