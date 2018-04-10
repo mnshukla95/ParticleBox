@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+
+target 'ParticleBox' do
+
+  use_frameworks!
+
+  pod 'Alamofire'
+
+  target 'ParticleBoxTests' do
+    pod 'Quick'
+    pod 'Nimble'
+    pod "Mockingjay"
+  end
+end
