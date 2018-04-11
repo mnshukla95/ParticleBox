@@ -8,7 +8,8 @@
 
 import UIKit
 
-struct BoxDocument {
+struct BoxDocument: Codable
+{
     //
     let key: String
     let value: String
@@ -22,5 +23,4 @@ struct BoxDocument {
         self.key = key
         self.value = value
     }
-    
 }

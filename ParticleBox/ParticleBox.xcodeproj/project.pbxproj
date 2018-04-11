@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138F1A90207D7E93009C11DF /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A8F207D7E93009C11DF /* HttpRequest.swift */; };
+		138F1A92207D86FA009C11DF /* ApiResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* ApiResponseObject.swift */; };
+		138F1A94207DCE6C009C11DF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A93207DCE6C009C11DF /* Config.swift */; };
 		13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B51F207C6FB30010C93E /* AppDelegate.swift */; };
 		13A4B522207C6FB30010C93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B521207C6FB30010C93E /* ViewController.swift */; };
 		13A4B525207C6FB30010C93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A4B523207C6FB30010C93E /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		138F1A8F207D7E93009C11DF /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		138F1A91207D86FA009C11DF /* ApiResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseObject.swift; sourceTree = "<group>"; };
+		138F1A93207DCE6C009C11DF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		13A4B51C207C6FB30010C93E /* ParticleBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A4B51F207C6FB30010C93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A4B521207C6FB30010C93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +134,10 @@
 			children = (
 				13A4B51F207C6FB30010C93E /* AppDelegate.swift */,
 				13A4B521207C6FB30010C93E /* ViewController.swift */,
+				138F1A93207DCE6C009C11DF /* Config.swift */,
+				138F1A91207D86FA009C11DF /* ApiResponseObject.swift */,
 				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
+				138F1A8F207D7E93009C11DF /* HttpRequest.swift */,
 				13A4B54F207C6FF90010C93E /* Models */,
 				13A4B523207C6FB30010C93E /* Main.storyboard */,
 				13A4B526207C6FB30010C93E /* Assets.xcassets */,
@@ -397,6 +406,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A4B522207C6FB30010C93E /* ViewController.swift in Sources */,
+				138F1A90207D7E93009C11DF /* HttpRequest.swift in Sources */,
+				138F1A92207D86FA009C11DF /* ApiResponseObject.swift in Sources */,
+				138F1A94207DCE6C009C11DF /* Config.swift in Sources */,
 				13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */,
 				13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */,
 				13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */,

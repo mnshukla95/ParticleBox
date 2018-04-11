@@ -12,15 +12,18 @@ import Nimble
 
 @testable import ParticleBox
 
-class BoxDocumentTests: QuickSpec {
+class BoxDocumentTests: QuickSpec
+{
     
     override func spec()
     {
         var boxDoc: BoxDocument?
         
-        describe("BoxDocumentSpec") {
+        describe("BoxDocumentSpec")
+        {
             
-            beforeEach {
+            beforeEach
+            {
                 
                 boxDoc = BoxDocument(key: "temperature", value: "25")
                 boxDoc!.scope = "product"
@@ -30,7 +33,8 @@ class BoxDocumentTests: QuickSpec {
                 
             }
             
-            it("should show boxDoc is not nil") {
+            it("should show boxDoc is not nil")
+            {
                 expect(boxDoc!).notTo(beNil())
             }
             
