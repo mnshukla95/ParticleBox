@@ -1,0 +1,6 @@
+module Mockingjay [system] {
+  umbrella header "Mockingjay-umbrella.h"
+
+  export *
+  module * { export * }
+}

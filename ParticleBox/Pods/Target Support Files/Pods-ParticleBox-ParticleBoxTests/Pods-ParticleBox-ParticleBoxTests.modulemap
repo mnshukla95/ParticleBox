@@ -1,4 +1,4 @@
-framework module Pods_ParticleBox_ParticleBoxTests {
+module Pods_ParticleBox_ParticleBoxTests [system] {
   umbrella header "Pods-ParticleBox-ParticleBoxTests-umbrella.h"
 
   export *

@@ -1,14 +1,17 @@
 platform :ios, '10.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
+
 target 'ParticleBox' do
 
-  use_frameworks!
-
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
+  pod 'ObjectMapper'
+  pod 'KeychainAccess'
 
   target 'ParticleBoxTests' do
     pod 'Quick'
     pod 'Nimble'
-    pod "Mockingjay"
+    pod 'Mockingjay'
   end
 end

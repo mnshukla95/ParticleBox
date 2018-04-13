@@ -7,20 +7,27 @@
 //
 
 import UIKit
+import ObjectMapper
 
-struct BoxDocument: Codable
+class BoxDocument: Mappable
 {
-    //
-    let key: String
-    let value: String
+    var key: String?
+    var value: String?
     var scope: String?
     var device_id: String?
     var product_id: Int?
     var updated_at: String?
     
-    init(key: String, value: String)
-    {
-        self.key = key
-        self.value = value
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        key <- map["key"]
+        value <- map["value"]
+        scope <- map["scope"]
+        device_id <- map["device_id"]
+        product_id <- map["product_id"]
+        updated_at <- map["updated_at"]
     }
 }

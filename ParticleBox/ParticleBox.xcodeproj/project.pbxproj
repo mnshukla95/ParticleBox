@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		138F1A90207D7E93009C11DF /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A8F207D7E93009C11DF /* HttpRequest.swift */; };
-		138F1A92207D86FA009C11DF /* ApiResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* ApiResponseObject.swift */; };
+		0462D82C2792934389B37754 /* libPods-ParticleBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */; };
+		135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
+		135E528820802915003EDF1E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E528720802915003EDF1E /* ApiResponse.swift */; };
+		138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
 		138F1A94207DCE6C009C11DF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A93207DCE6C009C11DF /* Config.swift */; };
 		13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B51F207C6FB30010C93E /* AppDelegate.swift */; };
 		13A4B522207C6FB30010C93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B521207C6FB30010C93E /* ViewController.swift */; };
@@ -21,8 +23,7 @@
 		13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B54D207C6FF40010C93E /* BoxDocument.swift */; };
 		13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95D207C76BD00C78648 /* ApiRequest.swift */; };
 		13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95F207D313E00C78648 /* ApiRequestTests.swift */; };
-		37FBF51DCB02746D06521693 /* Pods_ParticleBox_ParticleBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C888C0D4FEA69DE9C5FC2843 /* Pods_ParticleBox_ParticleBoxTests.framework */; };
-		52C5ACDD325A4A7CC8F7B2B1 /* Pods_ParticleBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB9C4B17CDECBCC5BEB2BD /* Pods_ParticleBox.framework */; };
+		B9B91F18D37DB6480710B0F3 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		138F1A8F207D7E93009C11DF /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
-		138F1A91207D86FA009C11DF /* ApiResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseObject.swift; sourceTree = "<group>"; };
+		13589C94208006180074DF11 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		135E528720802915003EDF1E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		138F1A91207D86FA009C11DF /* BoxListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListObject.swift; sourceTree = "<group>"; };
 		138F1A93207DCE6C009C11DF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		13A4B51C207C6FB30010C93E /* ParticleBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A4B51F207C6FB30010C93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,11 +65,12 @@
 		13A4B551207C70200010C93E /* BoxDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocumentTests.swift; sourceTree = "<group>"; };
 		13DFB95D207C76BD00C78648 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		13DFB95F207D313E00C78648 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
-		42CB9C4B17CDECBCC5BEB2BD /* Pods_ParticleBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParticleBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F058C8207FF9E800183FEF /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParticleBox-ParticleBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7450807A5102B72000660865 /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		786ADD96C175CF06AE96D099 /* Pods-ParticleBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox.debug.xcconfig"; sourceTree = "<group>"; };
+		B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParticleBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9FBCD57847C6EC726180AE /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; sourceTree = "<group>"; };
-		C888C0D4FEA69DE9C5FC2843 /* Pods_ParticleBox_ParticleBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParticleBox_ParticleBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC643E88496590C7DE6BA26 /* Pods-ParticleBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C5ACDD325A4A7CC8F7B2B1 /* Pods_ParticleBox.framework in Frameworks */,
+				0462D82C2792934389B37754 /* libPods-ParticleBox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FBF51DCB02746D06521693 /* Pods_ParticleBox_ParticleBoxTests.framework in Frameworks */,
+				B9B91F18D37DB6480710B0F3 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +104,10 @@
 		0F3F718F1793850AB070C404 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42CB9C4B17CDECBCC5BEB2BD /* Pods_ParticleBox.framework */,
-				C888C0D4FEA69DE9C5FC2843 /* Pods_ParticleBox_ParticleBoxTests.framework */,
+				13589C94208006180074DF11 /* ObjectMapper.framework */,
+				13F058C8207FF9E800183FEF /* ObjectMapper.framework */,
+				B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */,
+				20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,10 +139,7 @@
 			children = (
 				13A4B51F207C6FB30010C93E /* AppDelegate.swift */,
 				13A4B521207C6FB30010C93E /* ViewController.swift */,
-				138F1A93207DCE6C009C11DF /* Config.swift */,
-				138F1A91207D86FA009C11DF /* ApiResponseObject.swift */,
 				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
-				138F1A8F207D7E93009C11DF /* HttpRequest.swift */,
 				13A4B54F207C6FF90010C93E /* Models */,
 				13A4B523207C6FB30010C93E /* Main.storyboard */,
 				13A4B526207C6FB30010C93E /* Assets.xcassets */,
@@ -170,7 +172,10 @@
 		13A4B54F207C6FF90010C93E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				138F1A93207DCE6C009C11DF /* Config.swift */,
 				13A4B54D207C6FF40010C93E /* BoxDocument.swift */,
+				138F1A91207D86FA009C11DF /* BoxListObject.swift */,
+				135E528720802915003EDF1E /* ApiResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,7 +202,6 @@
 				13A4B518207C6FB30010C93E /* Sources */,
 				13A4B519207C6FB30010C93E /* Frameworks */,
 				13A4B51A207C6FB30010C93E /* Resources */,
-				D2CC58816B89DD532F7608EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,7 +220,6 @@
 				13A4B52C207C6FB30010C93E /* Sources */,
 				13A4B52D207C6FB30010C93E /* Frameworks */,
 				13A4B52E207C6FB30010C93E /* Resources */,
-				98135F25226ACB71437E3B2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,50 +357,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98135F25226ACB71437E3B2E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2CC58816B89DD532F7608EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -406,10 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A4B522207C6FB30010C93E /* ViewController.swift in Sources */,
-				138F1A90207D7E93009C11DF /* HttpRequest.swift in Sources */,
-				138F1A92207D86FA009C11DF /* ApiResponseObject.swift in Sources */,
+				138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */,
 				138F1A94207DCE6C009C11DF /* Config.swift in Sources */,
 				13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */,
+				135E528820802915003EDF1E /* ApiResponse.swift in Sources */,
 				13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */,
 				13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */,
 			);
@@ -421,6 +380,7 @@
 			files = (
 				13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */,
 				13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */,
+				135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */,
 				13A4B552207C70200010C93E /* BoxDocumentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +549,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R3AZEVQYJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"$(SRCROOT)",
+				);
 				INFOPLIST_FILE = ParticleBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,6 +573,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R3AZEVQYJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"$(SRCROOT)",
+				);
 				INFOPLIST_FILE = ParticleBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
