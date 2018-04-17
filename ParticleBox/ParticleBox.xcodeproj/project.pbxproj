@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0462D82C2792934389B37754 /* libPods-ParticleBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */; };
+		13055B052084C30C00FC6372 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13055B042084C30C00FC6372 /* ResultViewController.swift */; };
 		135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
 		135E528820802915003EDF1E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E528720802915003EDF1E /* ApiResponse.swift */; };
 		138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
 		138F1A94207DCE6C009C11DF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A93207DCE6C009C11DF /* Config.swift */; };
 		13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B51F207C6FB30010C93E /* AppDelegate.swift */; };
-		13A4B522207C6FB30010C93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B521207C6FB30010C93E /* ViewController.swift */; };
+		13A4B522207C6FB30010C93E /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B521207C6FB30010C93E /* RequestViewController.swift */; };
 		13A4B525207C6FB30010C93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A4B523207C6FB30010C93E /* Main.storyboard */; };
 		13A4B527207C6FB30010C93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A4B526207C6FB30010C93E /* Assets.xcassets */; };
 		13A4B52A207C6FB30010C93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A4B528207C6FB30010C93E /* LaunchScreen.storyboard */; };
@@ -44,13 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13055B042084C30C00FC6372 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		13589C94208006180074DF11 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		135E528720802915003EDF1E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		138F1A91207D86FA009C11DF /* BoxListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListObject.swift; sourceTree = "<group>"; };
 		138F1A93207DCE6C009C11DF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		13A4B51C207C6FB30010C93E /* ParticleBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A4B51F207C6FB30010C93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13A4B521207C6FB30010C93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13A4B521207C6FB30010C93E /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		13A4B524207C6FB30010C93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13A4B526207C6FB30010C93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A4B529207C6FB30010C93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,7 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				13A4B51F207C6FB30010C93E /* AppDelegate.swift */,
-				13A4B521207C6FB30010C93E /* ViewController.swift */,
+				13A4B521207C6FB30010C93E /* RequestViewController.swift */,
+				13055B042084C30C00FC6372 /* ResultViewController.swift */,
 				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
 				13A4B54F207C6FF90010C93E /* Models */,
 				13A4B523207C6FB30010C93E /* Main.storyboard */,
@@ -202,6 +205,7 @@
 				13A4B518207C6FB30010C93E /* Sources */,
 				13A4B519207C6FB30010C93E /* Frameworks */,
 				13A4B51A207C6FB30010C93E /* Resources */,
+				FDFCDB426D9B1629FF8CADC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +224,7 @@
 				13A4B52C207C6FB30010C93E /* Sources */,
 				13A4B52D207C6FB30010C93E /* Frameworks */,
 				13A4B52E207C6FB30010C93E /* Resources */,
+				7D0405265D616DC9E5B5CA28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +362,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7D0405265D616DC9E5B5CA28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests-resources.sh",
+				"${PODS_ROOT}/Eureka/Source/Resources/Eureka.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Eureka.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFCDB426D9B1629FF8CADC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh",
+				"${PODS_ROOT}/Eureka/Source/Resources/Eureka.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Eureka.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,9 +405,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A4B522207C6FB30010C93E /* ViewController.swift in Sources */,
+				13A4B522207C6FB30010C93E /* RequestViewController.swift in Sources */,
 				138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */,
 				138F1A94207DCE6C009C11DF /* Config.swift in Sources */,
+				13055B052084C30C00FC6372 /* ResultViewController.swift in Sources */,
 				13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */,
 				135E528820802915003EDF1E /* ApiResponse.swift in Sources */,
 				13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */,

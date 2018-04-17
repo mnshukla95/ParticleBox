@@ -8,6 +8,7 @@ target 'ParticleBox' do
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'KeychainAccess'
+  pod 'Eureka'
 
   target 'ParticleBoxTests' do
     pod 'Quick'

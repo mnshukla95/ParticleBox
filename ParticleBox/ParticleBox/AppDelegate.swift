@@ -17,9 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         let keychain = Keychain(service: "com.virtserver.swaggerhub-token")
             .synchronizable(true)
         keychain["swaggerhub-token"] = "Bearer <access_token>"
+        
+        let nav = UINavigationController()
+        let requestVC = RequestViewController()
+        nav.viewControllers = [requestVC]
+        UINavigationBar.appearance().barTintColor = .purple
+        nav.navigationBar.tintColor = .white
+        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = nav
+        window.makeKeyAndVisible()
+        
+        self.window = window
         
         return true
     }
