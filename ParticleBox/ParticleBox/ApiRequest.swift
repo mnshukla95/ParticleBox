@@ -25,9 +25,12 @@ class ApiRequest
     }
     
     
-    func getSingleBox(_ url: URL, parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
+    
+    func getSingleBox(key: String, parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        Alamofire.request(url,
+        let url = URL(string: String(Config.baseUrl + "/\(key)"))
+        
+        Alamofire.request(url!,
                           method: .get,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -41,9 +44,11 @@ class ApiRequest
         }
     }
     
-    func getBoxList(_ url: URL, parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
+    func getBoxList(parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        Alamofire.request(url,
+        let url = URL(string: Config.baseUrl)
+
+        Alamofire.request(url!,
                           method: .get,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -57,9 +62,11 @@ class ApiRequest
         }
     }
     
-    func postBoxDoc(_ url: URL, parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
+    func postBoxDoc(parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        Alamofire.request(url,
+        let url = URL(string: Config.baseUrl)
+        
+        Alamofire.request(url!,
                         method: .post,
                         parameters: parameters,
                         encoding: JSONEncoding.default,
@@ -71,9 +78,11 @@ class ApiRequest
         }
     }
     
-    func deleteBoxDoc(_ url: URL, parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
+    func deleteBoxDoc(key: String, parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        Alamofire.request(url,
+        let url = URL(string: String(Config.baseUrl + "/\(key)"))
+        
+        Alamofire.request(url!,
                           method: .delete,
                           parameters: parameters,
                           encoding: JSONEncoding.default,

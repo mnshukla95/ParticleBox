@@ -233,8 +233,11 @@ class RequestViewController: FormViewController {
                     }
                     else {
                         let vals = self?.form.values()
-                        let parameters = self?.switchKeys(dict: vals!)
-                        self?.pushVC(parameters: parameters!)
+                        var parameters = self?.switchKeys(dict: vals!)
+                        let method = parameters!["method"] as! String
+                        parameters!.removeValue(forKey: "method")
+                        self?.startRequest(dict: parameters!, method: method)
+                        //self?.pushVC(parameters: parameters!)
                     }
         }
     }
@@ -270,16 +273,37 @@ class RequestViewController: FormViewController {
         return parameters
     }
     
+    func startRequest(dict: [String:Any?], method: String)
+    {
+        let apiRequest = ApiRequest()
+        switch method {
+        case "GET (All)":
+            print(dict)
+        case "POST":
+            print("post")
+        case "GET (Single)":
+            let key = dict["key"] as! String
+//            dict.removeValue(forKey: "key")
+            apiRequest.getSingleBox(key: key, parameters: dict) { (response) in
+                self.pushVC(apiResponse: response)
+            }
+        case "DELETE":
+            print("delete")
+        default:
+            break
+        }
+    }
     
-    func pushVC(parameters: [String:Any?])
+    func pushVC(apiResponse: ApiResponse)
     {
         let transition = CATransition()
         transition.duration = 0.25
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         transition.type = kCATransitionMoveIn
-        
+
         let resultVC = ResultViewController()
-        resultVC.parameters = parameters
+        resultVC.apiResponse = apiResponse
+//        resultVC.parameters = parameters
         self.navigationController?.view.layer.add(transition, forKey: nil)
         self.navigationController?.pushViewController(resultVC, animated: false)
     }

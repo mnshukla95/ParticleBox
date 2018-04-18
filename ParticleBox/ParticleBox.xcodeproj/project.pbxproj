@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0462D82C2792934389B37754 /* libPods-ParticleBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */; };
-		13055B052084C30C00FC6372 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13055B042084C30C00FC6372 /* ResultViewController.swift */; };
+		13038FF62087F14300351F6B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13038FF52087F14300351F6B /* ResultViewController.swift */; };
 		135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
 		135E528820802915003EDF1E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E528720802915003EDF1E /* ApiResponse.swift */; };
 		138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13055B042084C30C00FC6372 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		13038FF52087F14300351F6B /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		13589C94208006180074DF11 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		135E528720802915003EDF1E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		138F1A91207D86FA009C11DF /* BoxListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListObject.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		13A4B54D207C6FF40010C93E /* BoxDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocument.swift; sourceTree = "<group>"; };
 		13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParticleBoxTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		13A4B551207C70200010C93E /* BoxDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocumentTests.swift; sourceTree = "<group>"; };
-		13DFB95D207C76BD00C78648 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		13DFB95D207C76BD00C78648 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiRequest.swift; path = ../ApiRequest.swift; sourceTree = "<group>"; };
 		13DFB95F207D313E00C78648 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
 		13F058C8207FF9E800183FEF /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParticleBox-ParticleBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,8 +141,7 @@
 			children = (
 				13A4B51F207C6FB30010C93E /* AppDelegate.swift */,
 				13A4B521207C6FB30010C93E /* RequestViewController.swift */,
-				13055B042084C30C00FC6372 /* ResultViewController.swift */,
-				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
+				13038FF52087F14300351F6B /* ResultViewController.swift */,
 				13A4B54F207C6FF90010C93E /* Models */,
 				13A4B523207C6FB30010C93E /* Main.storyboard */,
 				13A4B526207C6FB30010C93E /* Assets.xcassets */,
@@ -179,6 +178,7 @@
 				13A4B54D207C6FF40010C93E /* BoxDocument.swift */,
 				138F1A91207D86FA009C11DF /* BoxListObject.swift */,
 				135E528720802915003EDF1E /* ApiResponse.swift */,
+				13DFB95D207C76BD00C78648 /* ApiRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,9 +408,9 @@
 				13A4B522207C6FB30010C93E /* RequestViewController.swift in Sources */,
 				138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */,
 				138F1A94207DCE6C009C11DF /* Config.swift in Sources */,
-				13055B052084C30C00FC6372 /* ResultViewController.swift in Sources */,
 				13A4B520207C6FB30010C93E /* AppDelegate.swift in Sources */,
 				135E528820802915003EDF1E /* ApiResponse.swift in Sources */,
+				13038FF62087F14300351F6B /* ResultViewController.swift in Sources */,
 				13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */,
 				13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */,
 			);
