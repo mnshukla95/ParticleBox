@@ -233,9 +233,8 @@ class RequestViewController: FormViewController {
                     }
                     else {
                         let vals = self?.form.values()
-                        let method = vals!["segments"] as! String
                         let parameters = self?.switchKeys(dict: vals!)
-                        self?.pushVC(parameters: parameters!, method: method)
+                        self?.pushVC(parameters: parameters!)
                     }
         }
     }
@@ -244,7 +243,8 @@ class RequestViewController: FormViewController {
     {
         let keys = dict.keys
         var parameters = [String:Any]()
-        
+        let method = dict["segments"] as! String
+        parameters["method"] = method
         for key in keys{
             switch key {
             case "post_key", "get_single_key", "delete_key":
@@ -271,17 +271,17 @@ class RequestViewController: FormViewController {
     }
     
     
-    func pushVC(parameters: [String:Any?], method: String)
+    func pushVC(parameters: [String:Any?])
     {
-        print(method)
-        //let vals = form.values()
-        //let dict = switchKeys(dict: vals)
         let transition = CATransition()
         transition.duration = 0.25
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         transition.type = kCATransitionMoveIn
+        
+        let resultVC = ResultViewController()
+        resultVC.parameters = parameters
         self.navigationController?.view.layer.add(transition, forKey: nil)
-        self.navigationController?.pushViewController(ResultViewController(), animated: false)
+        self.navigationController?.pushViewController(resultVC, animated: false)
     }
 
 //    override func viewDidLoad() {

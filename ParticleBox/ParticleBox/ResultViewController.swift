@@ -9,6 +9,15 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    var parameters: [String:Any]? {
+        didSet {
+            let method = parameters!["method"] as! String
+            print(method)
+            parameters?.removeValue(forKey: "method")
+            print(parameters!)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
