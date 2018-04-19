@@ -11,11 +11,13 @@ class ResultViewController: UITableViewController {
     
     private let reuseIdentifier = "Cell"
     var headers: String?
+    var status: Int?
     var boxDocument: BoxDocument?
-    var boxList: [BoxDocument]?
+    var boxListObject: BoxListObject?
     
     var apiResponse: ApiResponse? {
         didSet {
+            status = apiResponse?.statusCode
             let apiHeaders = apiResponse?.headers
             headers = ((apiHeaders?.description)!)
             if (apiResponse?.boxDocument != nil)
@@ -24,7 +26,7 @@ class ResultViewController: UITableViewController {
             }
             if(apiResponse?.boxListObject != nil)
             {
-                
+                boxListObject = apiResponse?.boxListObject
             }
         }
     }
@@ -32,7 +34,7 @@ class ResultViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Result"
+        self.navigationItem.title = String("Status: \(self.status!)")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
 
         
@@ -73,11 +75,11 @@ class ResultViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0
         {
-            if ((self.apiResponse?.boxListObject?.listofBoxDocs) != nil)
+            if ((self.boxListObject) != nil)
             {
-                return (self.apiResponse?.boxListObject?.listofBoxDocs!.count)!
+                return (self.boxListObject?.listofBoxDocs?.count)!
             }
-            else if ((self.apiResponse?.boxDocument) != nil)
+            else if ((self.boxDocument) != nil)
             {
                 return 1
             }
@@ -102,12 +104,13 @@ class ResultViewController: UITableViewController {
             if (boxDocument != nil)
             {
                 let textString = String(format: "Key: \((self.boxDocument?.key)!)\nValue: \((self.boxDocument?.value)!)\nScope: \((self.boxDocument?.scope)!)\nDevice ID: \((self.boxDocument?.device_id)!)\nProduct ID: \((self.boxDocument?.product_id)!)\nUpdated At: \((self.boxDocument?.updated_at)!)")
-//                let textString = "Key: " + (self.boxDocument?.key)! +
-//                                        "\nValue: " + (self.boxDocument?.value)! +
-//                                        "\nScope: " + (self.boxDocument?.scope)! +
-//                                        " \nDevice ID: " + (self.boxDocument?.device_id)! +
-//                                        "\nProduct ID: " + (self.boxDocument?.product_id)! +
-//                                        "\nUpdated At: " + (self.boxDocument?.updated_at)!
+                cell.textLabel?.numberOfLines = 0
+                cell.textLabel?.text = textString
+            }
+            if (boxListObject != nil)
+            {
+                let boxDocument = self.boxListObject?.listofBoxDocs![indexPath.row]
+                let textString = String(format: "Key: \((boxDocument?.key)!)\nValue: \((boxDocument?.value)!)\nScope: \((boxDocument?.scope)!)\nDevice ID: \((boxDocument?.device_id)!)\nProduct ID: \((boxDocument?.product_id)!)\nUpdated At: \((boxDocument?.updated_at)!)")
                 cell.textLabel?.numberOfLines = 0
                 cell.textLabel?.text = textString
             }

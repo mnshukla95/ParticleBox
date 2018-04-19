@@ -103,18 +103,6 @@ class RequestViewController: FormViewController {
                 $0.hidden = "$segments != 'POST'"
             }
             
-            <<< TextRow(){ row in
-                row.title = "Key"
-                row.placeholder = "---"
-                row.tag = "post_key"
-            }
-            
-            <<< IntRow() {
-                $0.title = "Value"
-                $0.placeholder = "---"
-                $0.tag = "post_value"
-            }
-            
             <<< AlertRow<String>() {
                 $0.title = "Scope"
                 $0.cancelTitle = "Dismiss"
@@ -126,6 +114,18 @@ class RequestViewController: FormViewController {
                 }
                 .onPresent{ _, to in
                     to.view.tintColor = .purple
+            }
+            
+            <<< TextRow(){ row in
+                row.title = "Key"
+                row.placeholder = "---"
+                row.tag = "post_key"
+            }
+            
+            <<< IntRow() {
+                $0.title = "Value"
+                $0.placeholder = "---"
+                $0.tag = "post_value"
             }
             
             <<< IntRow() {
