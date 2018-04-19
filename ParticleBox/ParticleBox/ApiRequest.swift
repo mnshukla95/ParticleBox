@@ -19,19 +19,18 @@ class ApiRequest
     init()
     {
         let keychain = Keychain(service: "com.virtserver.swaggerhub-token")
+        self.requestHeaders["Authorization"] = keychain["swaggerhub-token"]
         self.requestHeaders["accept"] = "application/json"
         self.requestHeaders["Content-Type"] = "application/json"
-        self.requestHeaders["Authorization"] = keychain["swaggerhub-token"]
-        
     }
     
     
     
     func getSingleBox(key: String, parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        let url = URL(string: String(Config.baseUrl + "/\(key)"))
+        let url = URL(string: String(Config.baseUrl + "/\(key)"))!
         
-        Alamofire.request(url!,
+        Alamofire.request(url,
                           method: .get,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -47,9 +46,9 @@ class ApiRequest
     
     func getBoxList(parameters: [String : Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        let url = URL(string: Config.baseUrl)
+        let url = URL(string: Config.baseUrl)!
 
-        Alamofire.request(url!,
+        Alamofire.request(url,
                           method: .get,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -65,9 +64,9 @@ class ApiRequest
     
     func postBoxDoc(parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        let url = URL(string: Config.baseUrl)
+        let url = URL(string: Config.baseUrl)!
         
-        Alamofire.request(url!,
+        Alamofire.request(url,
                         method: .post,
                         parameters: parameters,
                         encoding: JSONEncoding.default,
@@ -81,9 +80,9 @@ class ApiRequest
     
     func deleteBoxDoc(key: String, parameters: [String:Any]?, callback:@escaping ((ApiResponse) -> Void))
     {
-        let url = URL(string: String(Config.baseUrl + "/\(key)"))
+        let url = URL(string: String(Config.baseUrl + "/\(key)"))!
         
-        Alamofire.request(url!,
+        Alamofire.request(url,
                           method: .delete,
                           parameters: parameters,
                           encoding: JSONEncoding.default,

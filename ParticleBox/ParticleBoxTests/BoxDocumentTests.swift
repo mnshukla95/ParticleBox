@@ -14,7 +14,6 @@ import Nimble
 
 class BoxDocumentTests: QuickSpec
 {
-    
     override func spec()
     {
         var boxDoc: BoxDocument?
@@ -25,12 +24,13 @@ class BoxDocumentTests: QuickSpec
             beforeEach
             {
                 
-                boxDoc = BoxDocument(key: "temperature", value: "25")
+                boxDoc = BoxDocument()
+                boxDoc!.key = "Temperature"
+                boxDoc!.value = 25
                 boxDoc!.scope = "product"
                 boxDoc!.device_id = "250000000001"
                 boxDoc!.product_id = 1234
                 boxDoc!.updated_at = "2016-08-29T09:12:33.001Z"
-                
             }
             
             it("should show boxDoc is not nil")

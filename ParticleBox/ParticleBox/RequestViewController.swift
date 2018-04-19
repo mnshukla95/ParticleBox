@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import Alamofire
 
 class RequestViewController: FormViewController {
     
@@ -282,27 +283,46 @@ class RequestViewController: FormViewController {
     func startRequest(dict: [String:Any?], method: String)
     {
         let apiRequest = ApiRequest()
-        switch method {
-        case "GET (All)":
-            apiRequest.getBoxList(parameters: dict) { (response) in
-                self.pushVC(apiResponse: response)
+        if !(NetworkReachabilityManager()!.isReachable) {
+            let alert = UIAlertController(title: "No internet connection!", message: "Need connection to send request!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.view.tintColor = .purple
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                }}))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else {
+            switch method {
+            case "GET (All)":
+                apiRequest.getBoxList(parameters: dict) { (response) in
+                    self.pushVC(apiResponse: response)
+                }
+            case "POST":
+                apiRequest.postBoxDoc(parameters: dict) { (response) in
+                    self.pushVC(apiResponse: response)
+                }
+            case "GET (Single)":
+                let key = dict["key"] as! String
+                apiRequest.getSingleBox(key: key, parameters: dict) { (response) in
+                    self.pushVC(apiResponse: response)
+                }
+            case "DELETE":
+                let key = dict["key"] as! String
+                apiRequest.deleteBoxDoc(key: key, parameters: dict) { (response) in
+                    self.pushVC(apiResponse: response)
+                }
+            default:
+                break
             }
-        case "POST":
-            apiRequest.postBoxDoc(parameters: dict) { (response) in
-                self.pushVC(apiResponse: response)
-            }
-        case "GET (Single)":
-            let key = dict["key"] as! String
-            apiRequest.getSingleBox(key: key, parameters: dict) { (response) in
-                self.pushVC(apiResponse: response)
-            }
-        case "DELETE":
-            let key = dict["key"] as! String
-            apiRequest.deleteBoxDoc(key: key, parameters: dict) { (response) in
-                self.pushVC(apiResponse: response)
-            }
-        default:
-            break
         }
     }
     

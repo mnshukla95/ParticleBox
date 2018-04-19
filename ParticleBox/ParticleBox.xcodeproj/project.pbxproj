@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0462D82C2792934389B37754 /* libPods-ParticleBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */; };
 		13038FF62087F14300351F6B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13038FF52087F14300351F6B /* ResultViewController.swift */; };
+		13038FF82088244C00351F6B /* BoxListObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13038FF72088244C00351F6B /* BoxListObjectTests.swift */; };
+		134CE20220882D7B00BC62E5 /* ApiResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134CE20120882D7B00BC62E5 /* ApiResponseTests.swift */; };
 		135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
 		135E528820802915003EDF1E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E528720802915003EDF1E /* ApiResponse.swift */; };
 		138F1A92207D86FA009C11DF /* BoxListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F1A91207D86FA009C11DF /* BoxListObject.swift */; };
@@ -21,10 +23,12 @@
 		13A4B540207C6FB30010C93E /* ParticleBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B53F207C6FB30010C93E /* ParticleBoxUITests.swift */; };
 		13A4B54E207C6FF40010C93E /* BoxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B54D207C6FF40010C93E /* BoxDocument.swift */; };
 		13A4B552207C70200010C93E /* BoxDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B551207C70200010C93E /* BoxDocumentTests.swift */; };
+		13C5D99D2088289200BB6FDE /* libQuick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C5D99C2088289200BB6FDE /* libQuick.a */; };
+		13C5D99F2088289900BB6FDE /* libNimble.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C5D99E2088289900BB6FDE /* libNimble.a */; };
 		13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A4B54D207C6FF40010C93E /* BoxDocument.swift */; };
 		13DFB95E207C76BD00C78648 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95D207C76BD00C78648 /* ApiRequest.swift */; };
 		13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFB95F207D313E00C78648 /* ApiRequestTests.swift */; };
-		B9B91F18D37DB6480710B0F3 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */; };
+		FC23FFA24C40C4887D0914D2 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108DC32F70711B7B9DEB5182 /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		13038FF52087F14300351F6B /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		13038FF72088244C00351F6B /* BoxListObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListObjectTests.swift; sourceTree = "<group>"; };
+		134CE20120882D7B00BC62E5 /* ApiResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseTests.swift; sourceTree = "<group>"; };
 		13589C94208006180074DF11 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		135E528720802915003EDF1E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		138F1A91207D86FA009C11DF /* BoxListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxListObject.swift; sourceTree = "<group>"; };
@@ -65,14 +72,15 @@
 		13A4B54D207C6FF40010C93E /* BoxDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocument.swift; sourceTree = "<group>"; };
 		13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParticleBoxTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		13A4B551207C70200010C93E /* BoxDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDocumentTests.swift; sourceTree = "<group>"; };
+		13C5D99C2088289200BB6FDE /* libQuick.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libQuick.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13C5D99E2088289900BB6FDE /* libNimble.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNimble.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DFB95D207C76BD00C78648 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiRequest.swift; path = ../ApiRequest.swift; sourceTree = "<group>"; };
 		13DFB95F207D313E00C78648 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
 		13F058C8207FF9E800183FEF /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20754C6ECD70DC03613C91E8 /* libPods-ParticleBox-ParticleBoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParticleBox-ParticleBoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7450807A5102B72000660865 /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		786ADD96C175CF06AE96D099 /* Pods-ParticleBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox.debug.xcconfig"; sourceTree = "<group>"; };
 		B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParticleBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB9FBCD57847C6EC726180AE /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE816ECB4F8113BB666DDC8A /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DCC643E88496590C7DE6BA26 /* Pods-ParticleBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParticleBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B91F18D37DB6480710B0F3 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */,
+				13C5D99F2088289900BB6FDE /* libNimble.a in Frameworks */,
+				13C5D99D2088289200BB6FDE /* libQuick.a in Frameworks */,
+				FC23FFA24C40C4887D0914D2 /* libPods-ParticleBox-ParticleBoxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,8 @@
 		0F3F718F1793850AB070C404 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13C5D99E2088289900BB6FDE /* libNimble.a */,
+				13C5D99C2088289200BB6FDE /* libQuick.a */,
 				13589C94208006180074DF11 /* ObjectMapper.framework */,
 				13F058C8207FF9E800183FEF /* ObjectMapper.framework */,
 				B6E5DB00ACF70C025F5CD90A /* libPods-ParticleBox.a */,
@@ -157,6 +169,8 @@
 				13A4B536207C6FB30010C93E /* Info.plist */,
 				13A4B551207C70200010C93E /* BoxDocumentTests.swift */,
 				13DFB95F207D313E00C78648 /* ApiRequestTests.swift */,
+				13038FF72088244C00351F6B /* BoxListObjectTests.swift */,
+				134CE20120882D7B00BC62E5 /* ApiResponseTests.swift */,
 				13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */,
 			);
 			path = ParticleBoxTests;
@@ -188,8 +202,8 @@
 			children = (
 				786ADD96C175CF06AE96D099 /* Pods-ParticleBox.debug.xcconfig */,
 				DCC643E88496590C7DE6BA26 /* Pods-ParticleBox.release.xcconfig */,
-				7450807A5102B72000660865 /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */,
-				BB9FBCD57847C6EC726180AE /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */,
+				CE816ECB4F8113BB666DDC8A /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */,
+				108DC32F70711B7B9DEB5182 /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -205,7 +219,7 @@
 				13A4B518207C6FB30010C93E /* Sources */,
 				13A4B519207C6FB30010C93E /* Frameworks */,
 				13A4B51A207C6FB30010C93E /* Resources */,
-				FDFCDB426D9B1629FF8CADC0 /* [CP] Copy Pods Resources */,
+				555EF24BFD7352F97A353443 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,11 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13A4B547207C6FB30010C93E /* Build configuration list for PBXNativeTarget "ParticleBoxTests" */;
 			buildPhases = (
-				0F176910A7CF7E0E9CFF014F /* [CP] Check Pods Manifest.lock */,
+				A96E58A2893F6CB83F222A32 /* [CP] Check Pods Manifest.lock */,
 				13A4B52C207C6FB30010C93E /* Sources */,
 				13A4B52D207C6FB30010C93E /* Frameworks */,
 				13A4B52E207C6FB30010C93E /* Resources */,
-				7D0405265D616DC9E5B5CA28 /* [CP] Copy Pods Resources */,
+				7F7B460EC5EC754CF61A7783 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,24 +340,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F176910A7CF7E0E9CFF014F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ParticleBox-ParticleBoxTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		36C1C88638A13BBFE50079A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,7 +358,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D0405265D616DC9E5B5CA28 /* [CP] Copy Pods Resources */ = {
+		555EF24BFD7352F97A353443 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh",
+				"${PODS_ROOT}/Eureka/Source/Resources/Eureka.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Eureka.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7B460EC5EC754CF61A7783 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,22 +394,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox-ParticleBoxTests/Pods-ParticleBox-ParticleBoxTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDFCDB426D9B1629FF8CADC0 /* [CP] Copy Pods Resources */ = {
+		A96E58A2893F6CB83F222A32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh",
-				"${PODS_ROOT}/Eureka/Source/Resources/Eureka.bundle",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Eureka.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-ParticleBox-ParticleBoxTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParticleBox/Pods-ParticleBox-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -421,9 +435,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DFB960207D313E00C78648 /* ApiRequestTests.swift in Sources */,
+				134CE20220882D7B00BC62E5 /* ApiResponseTests.swift in Sources */,
 				13DFB95A207C729F00C78648 /* BoxDocument.swift in Sources */,
 				135E5286208028CC003EDF1E /* BoxListObject.swift in Sources */,
 				13A4B552207C70200010C93E /* BoxDocumentTests.swift in Sources */,
+				13038FF82088244C00351F6B /* BoxListObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +650,7 @@
 		};
 		13A4B548207C6FB30010C93E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7450807A5102B72000660865 /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */;
+			baseConfigurationReference = CE816ECB4F8113BB666DDC8A /* Pods-ParticleBox-ParticleBoxTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -659,7 +675,7 @@
 		};
 		13A4B549207C6FB30010C93E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB9FBCD57847C6EC726180AE /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */;
+			baseConfigurationReference = 108DC32F70711B7B9DEB5182 /* Pods-ParticleBox-ParticleBoxTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
