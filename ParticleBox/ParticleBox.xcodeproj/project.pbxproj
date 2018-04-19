@@ -168,9 +168,9 @@
 			children = (
 				13A4B536207C6FB30010C93E /* Info.plist */,
 				13A4B551207C70200010C93E /* BoxDocumentTests.swift */,
-				13DFB95F207D313E00C78648 /* ApiRequestTests.swift */,
 				13038FF72088244C00351F6B /* BoxListObjectTests.swift */,
 				134CE20120882D7B00BC62E5 /* ApiResponseTests.swift */,
+				13DFB95F207D313E00C78648 /* ApiRequestTests.swift */,
 				13A4B550207C70200010C93E /* ParticleBoxTests-Bridging-Header.h */,
 			);
 			path = ParticleBoxTests;
