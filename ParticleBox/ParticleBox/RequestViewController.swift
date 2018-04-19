@@ -248,12 +248,18 @@ class RequestViewController: FormViewController {
         var parameters = [String:Any]()
         let method = dict["segments"] as! String
         parameters["method"] = method
+        
         for key in keys{
             switch key {
             case "post_key", "get_single_key", "delete_key":
                 parameters["key"] = dict[key] ?? nil
             case "post_value":
                 parameters["value"] = dict[key] ?? nil
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:SS.sss"
+                formatter.timeZone = TimeZone(abbreviation: "UTC")
+                let dateString = formatter.string(from: Date())
+                parameters["updated_at"] = dateString
             case "get_all_scope", "get_single_scope", "delete_scope", "post_scope":
                 parameters["scope"] = dict[key] ?? nil
             case "get_all_product_id", "get_single_product_id", "delete_product_id", "post_product_id":
@@ -278,17 +284,23 @@ class RequestViewController: FormViewController {
         let apiRequest = ApiRequest()
         switch method {
         case "GET (All)":
-            print(dict)
+            apiRequest.getBoxList(parameters: dict) { (response) in
+                self.pushVC(apiResponse: response)
+            }
         case "POST":
-            print("post")
+            apiRequest.postBoxDoc(parameters: dict) { (response) in
+                self.pushVC(apiResponse: response)
+            }
         case "GET (Single)":
             let key = dict["key"] as! String
-//            dict.removeValue(forKey: "key")
             apiRequest.getSingleBox(key: key, parameters: dict) { (response) in
                 self.pushVC(apiResponse: response)
             }
         case "DELETE":
-            print("delete")
+            let key = dict["key"] as! String
+            apiRequest.deleteBoxDoc(key: key, parameters: dict) { (response) in
+                self.pushVC(apiResponse: response)
+            }
         default:
             break
         }
@@ -303,74 +315,9 @@ class RequestViewController: FormViewController {
 
         let resultVC = ResultViewController()
         resultVC.apiResponse = apiResponse
-//        resultVC.parameters = parameters
         self.navigationController?.view.layer.add(transition, forKey: nil)
         self.navigationController?.pushViewController(resultVC, animated: false)
     }
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let api = ApiRequest()
-////        let url = URL(string: String(Config.baseUrl + "/temperature"))
-//        let url = URL(string: String(Config.baseUrl))
-//
-//
-////        let parameters: [String : Any] = [
-////            "scope":"device",
-////            "device_id":"250000000000000000000001",
-////            "product_id":1234,
-////            "filter":"temperature",
-////            "page":0,
-////            "per_page":10f
-////        ]
-//
-////        let parameters: [String : Any] = [
-////            "scope":"device",
-////            "device_id":"250000000000000000000001",
-////            "product_id":1234,
-////            "key":"temperature",
-////            "value":"25",
-////        ]
-//
-//        //2016-08-29T09:12:33.001Z
-//
-//        let formatter = DateFormatter()
-//        // initially set the format based on your datepicker date
-//        formatter.dateFormat = "yyyy-MM-dd HH:mm:SS.sss"
-//        formatter.timeZone = TimeZone(abbreviation: "UTC")
-//        let myString = formatter.string(from: Date())
-//        print(myString)
-//
-//        let parameters: [String : Any] = [
-//            "scope":"device",
-//            "device_id":"250000000000000000000001",
-//            "product_id":1234,
-//            "key":"temperature"
-//            ]
-//
-////        let parameters: [String : Any] = [
-////            "scope":"device",
-////            "device_id":"250000000000000000000001",
-////            "product_id":1234,
-////            "filter":"temperature",
-////            "page":0,
-////            "per_page":10
-////        ]
-//
-////        api.requestBoxList(url!, parameters: parameters) { (response) in
-////            let boxes = response.boxListObject!.listofBoxDocs!
-////            for box in boxes{
-////                print(box.device_id!)
-////            }
-////        }
-//
-//        api.deleteBoxDoc(url!, parameters: parameters) { (response) in
-//            print(response.headers)
-//        }
-//
-//
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -22,6 +22,7 @@ class ApiRequest
         self.requestHeaders["accept"] = "application/json"
         self.requestHeaders["Content-Type"] = "application/json"
         self.requestHeaders["Authorization"] = keychain["swaggerhub-token"]
+        
     }
     
     

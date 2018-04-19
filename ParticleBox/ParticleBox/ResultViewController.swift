@@ -10,10 +10,22 @@ import UIKit
 class ResultViewController: UITableViewController {
     
     private let reuseIdentifier = "Cell"
+    var headers: String?
+    var boxDocument: BoxDocument?
+    var boxList: [BoxDocument]?
     
     var apiResponse: ApiResponse? {
         didSet {
-            
+            let apiHeaders = apiResponse?.headers
+            headers = ((apiHeaders?.description)!)
+            if (apiResponse?.boxDocument != nil)
+            {
+                boxDocument = apiResponse?.boxDocument
+            }
+            if(apiResponse?.boxListObject != nil)
+            {
+                
+            }
         }
     }
     
@@ -56,17 +68,16 @@ class ResultViewController: UITableViewController {
         else {
             return "Headers"
         }
-        return ""
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0
         {
-            if ((self.apiResponse?.boxListObject?.listofBoxDocs!) != nil)
+            if ((self.apiResponse?.boxListObject?.listofBoxDocs) != nil)
             {
                 return (self.apiResponse?.boxListObject?.listofBoxDocs!.count)!
             }
-            else if ((self.apiResponse?.boxDocument!) != nil)
+            else if ((self.apiResponse?.boxDocument) != nil)
             {
                 return 1
             }
@@ -75,14 +86,38 @@ class ResultViewController: UITableViewController {
             }
         }
         else {
-            return (self.apiResponse?.headers.count)!
+            return 1
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)!
 
-        cell.textLabel?.text = "CELL"
+        if indexPath.section == 0
+        {
+            if (boxDocument != nil)
+            {
+                let textString = String(format: "Key: \((self.boxDocument?.key)!)\nValue: \((self.boxDocument?.value)!)\nScope: \((self.boxDocument?.scope)!)\nDevice ID: \((self.boxDocument?.device_id)!)\nProduct ID: \((self.boxDocument?.product_id)!)\nUpdated At: \((self.boxDocument?.updated_at)!)")
+//                let textString = "Key: " + (self.boxDocument?.key)! +
+//                                        "\nValue: " + (self.boxDocument?.value)! +
+//                                        "\nScope: " + (self.boxDocument?.scope)! +
+//                                        " \nDevice ID: " + (self.boxDocument?.device_id)! +
+//                                        "\nProduct ID: " + (self.boxDocument?.product_id)! +
+//                                        "\nUpdated At: " + (self.boxDocument?.updated_at)!
+                cell.textLabel?.numberOfLines = 0
+                cell.textLabel?.text = textString
+            }
+        }
+        
+        if indexPath.section == 1
+        {
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.text = headers
+        }
 
         return cell
     }
