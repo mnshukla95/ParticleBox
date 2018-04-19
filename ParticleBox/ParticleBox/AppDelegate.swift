@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let keychain = Keychain(service: "com.virtserver.swaggerhub-token")
             .synchronizable(true)
-        keychain["swaggerhub-token"] = "Bearer <access_token>"
+        keychain["swaggerhub-token"] = "1799645107029384mx238zk2fk"
         
         let nav = UINavigationController()
         let requestVC = RequestViewController()
